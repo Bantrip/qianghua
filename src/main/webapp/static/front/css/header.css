@@ -1,0 +1,52 @@
+.pg-hd {
+  background: #414b59;
+  color: #fff;
+}
+.pg-hd .logo {
+  display: block;
+  width: 107px;
+  padding: 11px 0;
+}
+.pg-hd .info {
+  float: right;
+}
+.pg-hd .info .user {
+  float: left;
+  padding: 10px 17px;
+}
+.pg-hd .info .user .portrait {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 22px;
+  vertical-align: middle;
+}
+.pg-hd .info .user .name {
+  margin: 0 20px 0 14px;
+}
+.pg-hd .info .user .icon-arrow {
+  display: inline-block;
+  width: 12px;
+  height: 10px;
+}
+.pg-hd .info .cart {
+  position: relative;
+  float: left;
+  padding-bottom: 26px;
+  color: #fff;
+}
+.pg-hd .info .cart .icon-cart {
+  display: inline-block;
+  width: 40px;
+  height: 37px;
+  margin-top: 5px;
+}
+.pg-hd .info .cart .num {
+  position: absolute;
+  top: 4px;
+  left: 18px;
+}
+.pg-hd .info .cart .name {
+  vertical-align: 5px;
+}

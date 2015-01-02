@@ -1,0 +1,68 @@
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+dl,
+dt,
+dd,
+textarea,
+input,
+button,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-weight: normal;
+}
+body {
+  font-family: Hiragino Sans GB, Arial, Helvetica, "宋体", sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 14px;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  outline: none;
+  line-height: 1.5;
+}
+textarea,
+input {
+  resize: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}

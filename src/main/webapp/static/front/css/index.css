@@ -1,0 +1,415 @@
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+dl,
+dt,
+dd,
+textarea,
+input,
+button,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-weight: normal;
+}
+body {
+  font-family: Hiragino Sans GB, Arial, Helvetica, "宋体", sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 14px;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  outline: none;
+  line-height: 1.5;
+}
+textarea,
+input {
+  resize: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.Fix {
+  zoom: 1;
+}
+.Fix:after {
+  display: block;
+  content: '';
+  height: 0;
+  clear: both;
+}
+.container {
+  width: 1110px;
+  margin: 0 auto;
+}
+.pop-edit-loc .pop-main {
+  width: 700px;
+}
+.pop-edit-loc .pop-main .section-search {
+  padding: 10px;
+}
+.section-search .tit {
+  font-size: 18px;
+}
+.section-search .tit .icon-dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 12px;
+  border-radius: 7px;
+  background: #93d6e5;
+}
+.section-search .result {
+  float: left;
+  width: 66%;
+  margin-right: 2%;
+}
+.section-search .result .tit {
+  margin-top: 26px;
+  padding-left: 32px;
+}
+.section-search .result .block {
+  margin-top: 22px;
+  border: 1px solid #bebebe;
+  background: #f0f0f0;
+}
+.section-search .result .block .search {
+  position: relative;
+  margin: 24px 34px 39px;
+  padding-left: 48px;
+  background: #fff;
+}
+.section-search .result .block .search .icon-search {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  width: 26px;
+  height: 27px;
+  background: url("i/bg-sprites.png") no-repeat;
+  background-position: -406px 0;
+}
+.section-search .result .block .search .input {
+  display: block;
+  width: 100%;
+  padding: 14px 0 15px;
+  border: none;
+}
+.section-search .result .block .search .nav {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  padding: 9px 0;
+}
+.section-search .result .block .search .nav span,
+.section-search .result .block .search .nav a {
+  margin-right: 5px;
+}
+.section-search .result .block .search .nav span {
+  color: #8d8d8d;
+}
+.section-search .result .block .list {
+  height: 300px;
+  overflow-y: auto;
+  background: #fff;
+}
+.section-search .result .block .list .city {
+  padding: 18px 34px 18px 24px;
+  border-left: 10px solid transparent;
+  border-bottom: 1px solid #f0f0f0;
+}
+.section-search .result .block .list .city .name {
+  margin-right: 20px;
+  font-size: 16px;
+}
+.section-search .result .block .list .city .rec {
+  color: #8d8d8d;
+}
+.section-search .result .block .list .city .icon-add {
+  float: right;
+  width: 35px;
+  height: 35px;
+  margin-top: -6px;
+  cursor: pointer;
+  background: url("i/bg-sprites.png") no-repeat;
+  background-position: -437px 0;
+}
+.section-search .result .block .list .city:hover {
+  border-left-color: #e95469;
+  background: #f0f0f0;
+}
+.section-search .result .block .list .city:hover .icon-add {
+  border-radius: 2px;
+  background-position: -469px 0;
+  background-color: #e95469;
+}
+.section-search .result .block .list .selected .icon-add {
+  display: none;
+}
+.section-search .result .block .list .selected:hover {
+  border-left-color: transparent;
+  background: transparent;
+}
+.section-search .result .block .list .loading {
+  display: none;
+  height: 100px;
+  background: url("i/loading.gif") center center no-repeat;
+}
+.section-search .select {
+  float: left;
+  width: 26%;
+  height: 520px;
+  padding: 0 3%;
+  border-top: 10px solid #404a58;
+  background: #f7f7f7;
+}
+.section-search .select .tit {
+  margin-top: 16px;
+}
+.section-search .select .list {
+  height: 300px;
+  overflow-y: auto;
+  margin-top: 22px zz;
+}
+.section-search .select .list li {
+  padding: 12px 0;
+  border-bottom: 1px dashed #bebebe;
+}
+.section-search .select .list li .icon-del {
+  float: right;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+.section-search .select .list li:hover {
+  color: #e95469;
+}
+.section-search .select .list li:hover .icon-del {
+  border-radius: 3px;
+  background: #e95469;
+  color: #fff;
+}
+.section-search .select .btn-view {
+  display: block;
+  width: 100%;
+  height: 45px;
+  margin: 20px auto 0;
+  border-radius: 3px;
+  background: #e95469;
+  color: #fff;
+  font-size: 16px;
+  line-height: 45px;
+  text-align: center;
+}
+.pg-hd {
+  background: #414b59;
+  color: #fff;
+}
+.pg-hd .logo {
+  display: block;
+  width: 107px;
+  padding: 11px 0;
+}
+.pg-hd .info {
+  float: right;
+}
+.pg-hd .info .user {
+  float: left;
+  padding: 10px 17px;
+}
+.pg-hd .info .user .portrait {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 22px;
+  vertical-align: middle;
+}
+.pg-hd .info .user .name {
+  margin: 0 20px 0 14px;
+}
+.pg-hd .info .user .icon-arrow {
+  display: inline-block;
+  width: 12px;
+  height: 10px;
+  background: url("i/bg-sprites.png") no-repeat;
+  background-position: 0 0;
+}
+.pg-hd .info .cart {
+  position: relative;
+  float: left;
+  padding-bottom: 26px;
+  color: #fff;
+}
+.pg-hd .info .cart .icon-cart {
+  display: inline-block;
+  width: 40px;
+  height: 37px;
+  margin-top: 5px;
+  background: url("i/bg-sprites.png") no-repeat;
+  background-position: -17px 0;
+}
+.pg-hd .info .cart .num {
+  position: absolute;
+  top: 4px;
+  left: 18px;
+}
+.pg-hd .info .cart .name {
+  vertical-align: 5px;
+}
+.pg-hd {
+  box-shadow: 0 0 5px #d1c7da inset;
+  background: #f3f0f6;
+  color: #333;
+}
+.pg-hd .info .cart {
+  color: #333;
+}
+.icon-location {
+  display: inline-block;
+  width: 20px;
+  height: 25px;
+  margin-right: 12px;
+  background: url("i/bg-sprites.png") no-repeat;
+  background-position: -236px 0;
+  vertical-align: middle;
+}
+.tc-banner {
+  position: relative;
+}
+.tc-banner .arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  height: 64px;
+  margin-top: -32px;
+  cursor: pointer;
+}
+.tc-banner .prev {
+  margin-left: -555px;
+  background: url("i/bg-sprites.png") no-repeat;
+  background-position: -326px 0;
+}
+.tc-banner .next {
+  margin-left: 521px;
+  background: url("i/bg-sprites.png") no-repeat;
+  background-position: -366px 0;
+}
+.tc-banner .con li a {
+  display: block;
+  height: 500px;
+}
+.section-list {
+  background: #f0f0f0;
+}
+.section-list .mod {
+  padding-top: 60px;
+}
+.section-list .mod .tit {
+  font-size: 20px;
+  text-align: center;
+}
+.section-list .mod .list {
+  margin: 15px -30px 0 0;
+}
+.section-list .mod .list li {
+  float: left;
+  height: 400px;
+  overflow: hidden;
+  margin: 20px 29px 0 0;
+  background: #fff;
+  font-size: 12px;
+}
+.section-list .mod .list .good {
+  position: relative;
+  width: 256px;
+}
+.section-list .mod .list .good .top {
+  display: block;
+  height: 256px;
+}
+.section-list .mod .list .good .top .img {
+  width: 256px;
+  height: 256px;
+}
+.section-list .mod .list .good .info {
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  padding: 0 16px 24px;
+  background: #fff;
+}
+.section-list .mod .list .good .info .name {
+  display: block;
+  height: 44px;
+  overflow: hidden;
+  margin-top: 17px;
+  line-height: 22px;
+}
+.section-list .mod .list .good .info .location {
+  margin-top: 26px;
+}
+.section-list .mod .list .good .info .des {
+  height: 36px;
+  overflow: hidden;
+  margin-top: 35px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+  color: #8d8d8d;
+  line-height: 18px;
+}
+.section-list .mod .list .destination {
+  width: 540px;
+}
+.section-list .mod .list .destination a {
+  display: block;
+  height: 320px;
+}
+.section-list .mod .list .destination a .img {
+  width: 540px;
+  height: 320px;
+}
+.section-list .mod .list .destination a .info {
+  margin-top: 25px;
+  padding-left: 15px;
+}

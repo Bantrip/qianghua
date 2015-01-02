@@ -1,0 +1,1254 @@
+[INFO] Re-create the schema and provision the sample data.
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Bantrip :: Backend :: Bidoushi 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (default-cli) @ bidoushi ---
+[INFO] Executing tasks
+
+main:
+[INFO] 1. Connection opened
+[INFO] 1. Connection.new Connection returned 
+[INFO] 1. Connection.setAutoCommit(false) returned 
+      [sql] Executing resource: /Users/huangkemin/Documents/workspace/my/by/bidous/src/main/resources/sql/h2/schema.sql
+[INFO] 1. Statement.new Statement returned 
+[INFO] 1. Connection.createStatement() returned net.sf.log4jdbc.StatementSpy@6c000e0c
+[INFO] 1. Statement.setEscapeProcessing(true) returned 
+[INFO] drop table if exists ss_user 
+
+[INFO] drop table if exists ss_user 
+ {executed in 7 msec}
+[INFO] 1. Statement.execute( drop table if exists ss_user) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] drop table if exists product 
+
+[INFO] drop table if exists product 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( drop table if exists product) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] drop table if exists dest 
+
+[INFO] drop table if exists dest 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( drop table if exists dest) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] drop table if exists product_has_dest 
+
+[INFO] drop table if exists product_has_dest 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( drop table if exists product_has_dest) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] drop table if exists tag_group 
+
+[INFO] drop table if exists tag_group 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( drop table if exists tag_group) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] drop table if exists tag 
+
+[INFO] drop table if exists tag 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( drop table if exists tag) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] drop table if exists product_has_tag 
+
+[INFO] drop table if exists product_has_tag 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( drop table if exists product_has_tag) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] drop table if exists prod_imgs 
+
+[INFO] drop table if exists prod_imgs 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( drop table if exists prod_imgs) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] drop table if exists product_desc 
+
+[INFO] drop table if exists product_desc 
+ {executed in 2 msec}
+[INFO] 1. Statement.execute( drop table if exists product_desc) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] CREATE TABLE product_desc ( id bigint generated by default as identity, content TEXT NULL, 
+product_id BIGINT NOT NULL, index BIGINT NULL COMMENT '排序号', type BIGINT NULL COMMENT '0：desc 
+1:image', PRIMARY KEY (id), ) 
+
+[INFO] CREATE TABLE product_desc ( id bigint generated by default as identity, content TEXT NULL, 
+product_id BIGINT NOT NULL, index BIGINT NULL COMMENT '排序号', type BIGINT NULL COMMENT '0：desc 
+1:image', PRIMARY KEY (id), ) 
+ {executed in 2 msec}
+[INFO] 1. Statement.execute(  CREATE TABLE product_desc ( id bigint  generated by default as identity, content TEXT NULL, product_id BIGINT NOT NULL, index BIGINT NULL COMMENT '排序号', type BIGINT NULL COMMENT '0：desc  1:image', PRIMARY KEY (id), )) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] CREATE TABLE prod_imgs ( id BIGINT generated by default as identity, url VARCHAR(2000) NULL, 
+product_id BIGINT NOT NULL, index BIGINT NULL, PRIMARY KEY (id), ) 
+
+[INFO] CREATE TABLE prod_imgs ( id BIGINT generated by default as identity, url VARCHAR(2000) NULL, 
+product_id BIGINT NOT NULL, index BIGINT NULL, PRIMARY KEY (id), ) 
+ {executed in 2 msec}
+[INFO] 1. Statement.execute(   CREATE TABLE prod_imgs ( id BIGINT generated by default as identity, url VARCHAR(2000) NULL, product_id BIGINT NOT NULL, index BIGINT NULL, PRIMARY KEY (id), )) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] create table product_has_tag ( product_id BIGINT NOT NULL, tag_id BIGINT NOT NULL, id bigint 
+generated by default as identity, PRIMARY KEY (id) ) 
+
+[INFO] create table product_has_tag ( product_id BIGINT NOT NULL, tag_id BIGINT NOT NULL, id bigint 
+generated by default as identity, PRIMARY KEY (id) ) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute(    create table product_has_tag ( product_id BIGINT NOT NULL, tag_id BIGINT NOT NULL, id bigint generated by default as identity, PRIMARY KEY (id) )) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] create table tag ( id bigint generated by default as identity, name VARCHAR(300) NULL COMMENT 
+'tag名', group_id bigint NOT NULL, PRIMARY KEY (id), ) 
+
+[INFO] create table tag ( id bigint generated by default as identity, name VARCHAR(300) NULL COMMENT 
+'tag名', group_id bigint NOT NULL, PRIMARY KEY (id), ) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute(  create table tag ( id bigint generated by default as identity, name VARCHAR(300) NULL COMMENT 'tag名', group_id bigint NOT NULL, PRIMARY KEY (id), )) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] create table tag_group ( id bigint generated by default as identity, name VARCHAR(300) NULL 
+comment 'tag组名', PRIMARY KEY (id) ) 
+
+[INFO] create table tag_group ( id bigint generated by default as identity, name VARCHAR(300) NULL 
+comment 'tag组名', PRIMARY KEY (id) ) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute(   create table tag_group ( id bigint generated by default as identity, name VARCHAR(300) NULL comment 'tag组名', PRIMARY KEY (id) )) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] create table product_has_dest ( product_id BIGINT NOT NULL, dest_id BIGINT NOT NULL, id bigint 
+generated by default as identity, PRIMARY KEY (id) ) 
+
+[INFO] create table product_has_dest ( product_id BIGINT NOT NULL, dest_id BIGINT NOT NULL, id bigint 
+generated by default as identity, PRIMARY KEY (id) ) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute(   create table product_has_dest ( product_id BIGINT NOT NULL, dest_id BIGINT NOT NULL, id bigint generated by default as identity, PRIMARY KEY (id) )) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] create table dest ( id bigint generated by default as identity, name VARCHAR(200) , type bigint, 
+PRIMARY KEY (id) ) 
+
+[INFO] create table dest ( id bigint generated by default as identity, name VARCHAR(200) , type bigint, 
+PRIMARY KEY (id) ) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute(  create table dest ( id bigint generated by default as identity, name VARCHAR(200)  , type bigint, PRIMARY KEY (id) )) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] create table product ( id bigint generated by default as identity, name varchar(200), category_id 
+bigint , recommand varchar(500) , status bigint , price DECIMAL(10,2) , merchant_id bigint 
+, url varchar(2000) , stock DECIMAL(10,0) , primary key (id) ) 
+
+[INFO] create table product ( id bigint generated by default as identity, name varchar(200), category_id 
+bigint , recommand varchar(500) , status bigint , price DECIMAL(10,2) , merchant_id bigint 
+, url varchar(2000) , stock DECIMAL(10,0) , primary key (id) ) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute(  create table product ( id bigint generated by default as identity, name varchar(200), category_id bigint , recommand varchar(500) , status bigint  , price DECIMAL(10,2)  , merchant_id bigint , url varchar(2000)  , stock DECIMAL(10,0) , primary key (id) )) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] create table ss_user ( id bigint generated by default as identity, login_name varchar(64) not 
+null unique, name varchar(64) not null, password varchar(255) not null, salt varchar(64) not 
+null, roles varchar(255) not null, register_date timestamp not null, primary key (id) ) 
+
+[INFO] create table ss_user ( id bigint generated by default as identity, login_name varchar(64) not 
+null unique, name varchar(64) not null, password varchar(255) not null, salt varchar(64) not 
+null, roles varchar(255) not null, register_date timestamp not null, primary key (id) ) 
+ {executed in 2 msec}
+[INFO] 1. Statement.execute(    create table ss_user ( id bigint generated by default as identity, login_name varchar(64) not null unique, name varchar(64) not null, password varchar(255) not null, salt varchar(64) not null, roles varchar(255) not null, register_date timestamp not null, primary key (id) )) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] 1. Connection.commit() returned 
+      [sql] Executing resource: /Users/huangkemin/Documents/workspace/my/by/bidous/src/test/resources/data/h2/import-data.sql
+[INFO] insert into ss_user (id, login_name, name, password, salt, roles, register_date) values(1,'admin','Admin','691b14d79bf0fa2215f155235df5e670b64394cc','7efbd59d9741d34f','admin','2012-06-04 
+01:00:00') 
+
+[INFO] insert into ss_user (id, login_name, name, password, salt, roles, register_date) values(1,'admin','Admin','691b14d79bf0fa2215f155235df5e670b64394cc','7efbd59d9741d34f','admin','2012-06-04 
+01:00:00') 
+ {executed in 4 msec}
+[INFO] 1. Statement.execute(    insert into ss_user (id, login_name, name, password, salt, roles, register_date) values(1,'admin','Admin','691b14d79bf0fa2215f155235df5e670b64394cc','7efbd59d9741d34f','admin','2012-06-04 01:00:00')) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into ss_user (id, login_name, name, password, salt, roles, register_date) values(2,'user','Calvin','2488aa0c31c624687bd9928e0a5d29e7d1ed520b','6d65d24122c30500','user','2012-06-04 
+02:00:00') 
+
+[INFO] insert into ss_user (id, login_name, name, password, salt, roles, register_date) values(2,'user','Calvin','2488aa0c31c624687bd9928e0a5d29e7d1ed520b','6d65d24122c30500','user','2012-06-04 
+02:00:00') 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into ss_user (id, login_name, name, password, salt, roles, register_date) values(2,'user','Calvin','2488aa0c31c624687bd9928e0a5d29e7d1ed520b','6d65d24122c30500','user','2012-06-04 02:00:00')) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into product (id,name, recommand , status , price,url,stock) values (1,'18岁大学生陪你游山玩水','no 
+zuo no die',1,22.3,'http://www.yhd.com',0) 
+
+[INFO] insert into product (id,name, recommand , status , price,url,stock) values (1,'18岁大学生陪你游山玩水','no 
+zuo no die',1,22.3,'http://www.yhd.com',0) 
+ {executed in 2 msec}
+[INFO] 1. Statement.execute(  insert into product (id,name, recommand , status ,  price,url,stock) values (1,'18岁大学生陪你游山玩水','no zuo no die',1,22.3,'http://www.yhd.com',0)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into product (id,name, recommand , status , price,url,stock) values (2,'高科技产品','why 
+you try',0,1222.3,'htp://www.yhd.com',0) 
+
+[INFO] insert into product (id,name, recommand , status , price,url,stock) values (2,'高科技产品','why 
+you try',0,1222.3,'htp://www.yhd.com',0) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into product (id,name, recommand , status ,  price,url,stock) values (2,'高科技产品','why you try',0,1222.3,'htp://www.yhd.com',0)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (1,'三亚',0) 
+
+[INFO] insert into dest(id,name,type) values (1,'三亚',0) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute(  insert into dest(id,name,type) values (1,'三亚',0)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (2,'长白山',0) 
+
+[INFO] insert into dest(id,name,type) values (2,'长白山',0) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (2,'长白山',0)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (3,'丽江',0) 
+
+[INFO] insert into dest(id,name,type) values (3,'丽江',0) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (3,'丽江',0)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (4,'桂林',0) 
+
+[INFO] insert into dest(id,name,type) values (4,'桂林',0) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (4,'桂林',0)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (5,'厦门',0) 
+
+[INFO] insert into dest(id,name,type) values (5,'厦门',0) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (5,'厦门',0)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (6,'大连',0) 
+
+[INFO] insert into dest(id,name,type) values (6,'大连',0) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (6,'大连',0)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (7,'青岛',0) 
+
+[INFO] insert into dest(id,name,type) values (7,'青岛',0) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (7,'青岛',0)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (8,'成都',0) 
+
+[INFO] insert into dest(id,name,type) values (8,'成都',0) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (8,'成都',0)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (9,'九寨沟',0) 
+
+[INFO] insert into dest(id,name,type) values (9,'九寨沟',0) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (9,'九寨沟',0)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (10,'西双版纳',0) 
+
+[INFO] insert into dest(id,name,type) values (10,'西双版纳',0) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (10,'西双版纳',0)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (11,'昆明',0) 
+
+[INFO] insert into dest(id,name,type) values (11,'昆明',0) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (11,'昆明',0)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (12,'曼谷',1) 
+
+[INFO] insert into dest(id,name,type) values (12,'曼谷',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (12,'曼谷',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (13,'大阪',1) 
+
+[INFO] insert into dest(id,name,type) values (13,'大阪',1) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (13,'大阪',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (14,'首尔',1) 
+
+[INFO] insert into dest(id,name,type) values (14,'首尔',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (14,'首尔',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (15,'东京',1) 
+
+[INFO] insert into dest(id,name,type) values (15,'东京',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (15,'东京',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (16,'京都',1) 
+
+[INFO] insert into dest(id,name,type) values (16,'京都',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (16,'京都',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (17,'普吉岛',1) 
+
+[INFO] insert into dest(id,name,type) values (17,'普吉岛',1) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (17,'普吉岛',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (18,'巴厘岛',1) 
+
+[INFO] insert into dest(id,name,type) values (18,'巴厘岛',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (18,'巴厘岛',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (19,'新加坡',1) 
+
+[INFO] insert into dest(id,name,type) values (19,'新加坡',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (19,'新加坡',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (20,'清迈',1) 
+
+[INFO] insert into dest(id,name,type) values (20,'清迈',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (20,'清迈',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (21,'柬埔寨/吴哥窟',1) 
+
+[INFO] insert into dest(id,name,type) values (21,'柬埔寨/吴哥窟',1) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (21,'柬埔寨/吴哥窟',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (22,'香港',1) 
+
+[INFO] insert into dest(id,name,type) values (22,'香港',1) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (22,'香港',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (23,'澳门',1) 
+
+[INFO] insert into dest(id,name,type) values (23,'澳门',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (23,'澳门',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (24,'台北/高雄/垦丁',1) 
+
+[INFO] insert into dest(id,name,type) values (24,'台北/高雄/垦丁',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (24,'台北/高雄/垦丁',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (25,'希腊',1) 
+
+[INFO] insert into dest(id,name,type) values (25,'希腊',1) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (25,'希腊',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (26,'马尔代夫',1) 
+
+[INFO] insert into dest(id,name,type) values (26,'马尔代夫',1) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (26,'马尔代夫',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (27,'夏威夷',1) 
+
+[INFO] insert into dest(id,name,type) values (27,'夏威夷',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (27,'夏威夷',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (28,'美国',1) 
+
+[INFO] insert into dest(id,name,type) values (28,'美国',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (28,'美国',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (29,'欧洲',1) 
+
+[INFO] insert into dest(id,name,type) values (29,'欧洲',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (29,'欧洲',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (30,'尼泊尔',1) 
+
+[INFO] insert into dest(id,name,type) values (30,'尼泊尔',1) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (30,'尼泊尔',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into dest(id,name,type) values (31,'济州岛',1) 
+
+[INFO] insert into dest(id,name,type) values (31,'济州岛',1) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into dest(id,name,type) values (31,'济州岛',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into product_has_dest(dest_id,product_id)values(1,1) 
+
+[INFO] insert into product_has_dest(dest_id,product_id)values(1,1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute(  insert into product_has_dest(dest_id,product_id)values(1,1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into product_has_dest(dest_id,product_id)values(1,18) 
+
+[INFO] insert into product_has_dest(dest_id,product_id)values(1,18) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into product_has_dest(dest_id,product_id)values(1,18)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into product_has_dest(dest_id,product_id)values(2,1) 
+
+[INFO] insert into product_has_dest(dest_id,product_id)values(2,1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into product_has_dest(dest_id,product_id)values(2,1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into product_has_dest(dest_id,product_id)values(2,27) 
+
+[INFO] insert into product_has_dest(dest_id,product_id)values(2,27) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into product_has_dest(dest_id,product_id)values(2,27)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag_group(id,name)values(1,'主题') 
+
+[INFO] insert into tag_group(id,name)values(1,'主题') 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute(  insert into tag_group(id,name)values(1,'主题')) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag_group(id,name)values(2,'品类') 
+
+[INFO] insert into tag_group(id,name)values(2,'品类') 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag_group(id,name)values(2,'品类')) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag_group(id,name)values(3,'人群') 
+
+[INFO] insert into tag_group(id,name)values(3,'人群') 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag_group(id,name)values(3,'人群')) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(1,'登山',1) 
+
+[INFO] insert into tag(id,name,group_id)values(1,'登山',1) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute(  insert into tag(id,name,group_id)values(1,'登山',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(2,'露营',1) 
+
+[INFO] insert into tag(id,name,group_id)values(2,'露营',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(2,'露营',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(3,'玩水',1) 
+
+[INFO] insert into tag(id,name,group_id)values(3,'玩水',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(3,'玩水',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(4,'潜水',1) 
+
+[INFO] insert into tag(id,name,group_id)values(4,'潜水',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(4,'潜水',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(5,'滑雪',1) 
+
+[INFO] insert into tag(id,name,group_id)values(5,'滑雪',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(5,'滑雪',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(6,'自驾',1) 
+
+[INFO] insert into tag(id,name,group_id)values(6,'自驾',1) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(6,'自驾',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(7,'徒步',1) 
+
+[INFO] insert into tag(id,name,group_id)values(7,'徒步',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(7,'徒步',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(8,'骑行',1) 
+
+[INFO] insert into tag(id,name,group_id)values(8,'骑行',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(8,'骑行',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(9,'美食',1) 
+
+[INFO] insert into tag(id,name,group_id)values(9,'美食',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(9,'美食',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(10,'购物',1) 
+
+[INFO] insert into tag(id,name,group_id)values(10,'购物',1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(10,'购物',1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(11,'电子',2) 
+
+[INFO] insert into tag(id,name,group_id)values(11,'电子',2) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute(  insert into tag(id,name,group_id)values(11,'电子',2)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(12,'服饰',2) 
+
+[INFO] insert into tag(id,name,group_id)values(12,'服饰',2) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(12,'服饰',2)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(13,'户外',2) 
+
+[INFO] insert into tag(id,name,group_id)values(13,'户外',2) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(13,'户外',2)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(14,'收纳',2) 
+
+[INFO] insert into tag(id,name,group_id)values(14,'收纳',2) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(14,'收纳',2)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(15,'日用',2) 
+
+[INFO] insert into tag(id,name,group_id)values(15,'日用',2) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(15,'日用',2)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(16,'日化',2) 
+
+[INFO] insert into tag(id,name,group_id)values(16,'日化',2) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(16,'日化',2)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(17,'穿戴',2) 
+
+[INFO] insert into tag(id,name,group_id)values(17,'穿戴',2) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(17,'穿戴',2)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(18,'医护',2) 
+
+[INFO] insert into tag(id,name,group_id)values(18,'医护',2) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(18,'医护',2)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(19,'娱乐',2) 
+
+[INFO] insert into tag(id,name,group_id)values(19,'娱乐',2) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(19,'娱乐',2)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(20,'男士',3) 
+
+[INFO] insert into tag(id,name,group_id)values(20,'男士',3) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute(  insert into tag(id,name,group_id)values(20,'男士',3)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(21,'儿童',3) 
+
+[INFO] insert into tag(id,name,group_id)values(21,'儿童',3) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(21,'儿童',3)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(22,'女士',3) 
+
+[INFO] insert into tag(id,name,group_id)values(22,'女士',3) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(22,'女士',3)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into tag(id,name,group_id)values(23,'老人',3) 
+
+[INFO] insert into tag(id,name,group_id)values(23,'老人',3) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute( insert into tag(id,name,group_id)values(23,'老人',3)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into product_has_tag(product_id,tag_id)values(1,1) 
+
+[INFO] insert into product_has_tag(product_id,tag_id)values(1,1) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute(   insert into product_has_tag(product_id,tag_id)values(1,1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into product_has_tag(product_id,tag_id)values(1,11) 
+
+[INFO] insert into product_has_tag(product_id,tag_id)values(1,11) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into product_has_tag(product_id,tag_id)values(1,11)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into product_has_tag(product_id,tag_id)values(1,21) 
+
+[INFO] insert into product_has_tag(product_id,tag_id)values(1,21) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into product_has_tag(product_id,tag_id)values(1,21)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into product_has_tag(product_id,tag_id)values(2,3) 
+
+[INFO] insert into product_has_tag(product_id,tag_id)values(2,3) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into product_has_tag(product_id,tag_id)values(2,3)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into product_has_tag(product_id,tag_id)values(2,15) 
+
+[INFO] insert into product_has_tag(product_id,tag_id)values(2,15) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into product_has_tag(product_id,tag_id)values(2,15)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into product_has_tag(product_id,tag_id)values(2,22) 
+
+[INFO] insert into product_has_tag(product_id,tag_id)values(2,22) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into product_has_tag(product_id,tag_id)values(2,22)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into prod_imgs(id,url,product_id,index)values(1,'http://d7.yihaodianimg.com/N07/M01/02/26/ChEbvFRW9E2Aca1_AAFD67mmpHU46600.jpg',1,1) 
+
+[INFO] insert into prod_imgs(id,url,product_id,index)values(1,'http://d7.yihaodianimg.com/N07/M01/02/26/ChEbvFRW9E2Aca1_AAFD67mmpHU46600.jpg',1,1) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute(    insert into prod_imgs(id,url,product_id,index)values(1,'http://d7.yihaodianimg.com/N07/M01/02/26/ChEbvFRW9E2Aca1_AAFD67mmpHU46600.jpg',1,1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into prod_imgs(id,url,product_id,index)values(2,'http://d9.yihaodianimg.com/N07/M0B/14/A6/CgQI0FRR5zeAMuOeAABA6o7BXsA62300.jpg',1,2) 
+
+[INFO] insert into prod_imgs(id,url,product_id,index)values(2,'http://d9.yihaodianimg.com/N07/M0B/14/A6/CgQI0FRR5zeAMuOeAABA6o7BXsA62300.jpg',1,2) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into prod_imgs(id,url,product_id,index)values(2,'http://d9.yihaodianimg.com/N07/M0B/14/A6/CgQI0FRR5zeAMuOeAABA6o7BXsA62300.jpg',1,2)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into prod_imgs(id,url,product_id,index)values(3,'http://d9.yihaodianimg.com/N05/M03/7E/FC/CgQI0lRTZf6AYV8jAAFkCYOAHJI56000.jpg',1,3) 
+
+[INFO] insert into prod_imgs(id,url,product_id,index)values(3,'http://d9.yihaodianimg.com/N05/M03/7E/FC/CgQI0lRTZf6AYV8jAAFkCYOAHJI56000.jpg',1,3) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into prod_imgs(id,url,product_id,index)values(3,'http://d9.yihaodianimg.com/N05/M03/7E/FC/CgQI0lRTZf6AYV8jAAFkCYOAHJI56000.jpg',1,3)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into prod_imgs(id,url,product_id,index)values(4,'http://d7.yihaodianimg.com/N05/M03/84/97/CgQI0lRW4ueAVzWAAAA7gYPVO4U94500.jpg',2,1) 
+
+[INFO] insert into prod_imgs(id,url,product_id,index)values(4,'http://d7.yihaodianimg.com/N05/M03/84/97/CgQI0lRW4ueAVzWAAAA7gYPVO4U94500.jpg',2,1) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into prod_imgs(id,url,product_id,index)values(4,'http://d7.yihaodianimg.com/N05/M03/84/97/CgQI0lRW4ueAVzWAAAA7gYPVO4U94500.jpg',2,1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into prod_imgs(id,url,product_id,index)values(5,'"http://d8.yihaodianimg.com/V00/M08/37/74/CgQDsFQrdMyAbyBCAAA2fEMvzqc32800.jpg',2,2) 
+
+[INFO] insert into prod_imgs(id,url,product_id,index)values(5,'"http://d8.yihaodianimg.com/V00/M08/37/74/CgQDsFQrdMyAbyBCAAA2fEMvzqc32800.jpg',2,2) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute( insert into prod_imgs(id,url,product_id,index)values(5,'"http://d8.yihaodianimg.com/V00/M08/37/74/CgQDsFQrdMyAbyBCAAA2fEMvzqc32800.jpg',2,2)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into product_desc(id,content,product_id,index,type) values(1,'http://d7.yihaodianimg.com/N05/M03/84/97/CgQI0lRW4ueAVzWAAAA7gYPVO4U94500.jpg',1,1,1) 
+
+[INFO] insert into product_desc(id,content,product_id,index,type) values(1,'http://d7.yihaodianimg.com/N05/M03/84/97/CgQI0lRW4ueAVzWAAAA7gYPVO4U94500.jpg',1,1,1) 
+ {executed in 3 msec}
+[INFO] 1. Statement.execute(    insert into product_desc(id,content,product_id,index,type) values(1,'http://d7.yihaodianimg.com/N05/M03/84/97/CgQI0lRW4ueAVzWAAAA7gYPVO4U94500.jpg',1,1,1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into product_desc(id,content,product_id,index,type) values(2,'买的是傻逼\n买的是傻逼',1,2,0) 
+
+[INFO] insert into product_desc(id,content,product_id,index,type) values(2,'买的是傻逼\n买的是傻逼',1,2,0) 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute(  insert into product_desc(id,content,product_id,index,type) values(2,'买的是傻逼\n买的是傻逼',1,2,0)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into product_desc(id,content,product_id,index,type) values(3,'http://d7.yihaodianimg.com/N05/M03/84/97/CgQI0lRW4ueAVzWAAAA7gYPVO4U94500.jpg',2,1,1) 
+
+[INFO] insert into product_desc(id,content,product_id,index,type) values(3,'http://d7.yihaodianimg.com/N05/M03/84/97/CgQI0lRW4ueAVzWAAAA7gYPVO4U94500.jpg',2,1,1) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute(  insert into product_desc(id,content,product_id,index,type) values(3,'http://d7.yihaodianimg.com/N05/M03/84/97/CgQI0lRW4ueAVzWAAAA7gYPVO4U94500.jpg',2,1,1)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] insert into product_desc(id,content,product_id,index,type) values(4,'n买的不是傻逼才怪\n买的不是傻逼才怪',2,2,0) 
+
+[INFO] insert into product_desc(id,content,product_id,index,type) values(4,'n买的不是傻逼才怪\n买的不是傻逼才怪',2,2,0) 
+ {executed in 1 msec}
+[INFO] 1. Statement.execute(  insert into product_desc(id,content,product_id,index,type) values(4,'n买的不是傻逼才怪\n买的不是傻逼才怪',2,2,0)) returned false
+[INFO] 1. Statement.getUpdateCount() returned 1
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] commit 
+
+[INFO] commit 
+ {executed in 0 msec}
+[INFO] 1. Statement.execute(   commit) returned false
+[INFO] 1. Statement.getUpdateCount() returned 0
+[INFO] 1. Statement.getMoreResults() returned false
+[INFO] 1. Statement.getUpdateCount() returned -1
+[INFO] 1. Statement.getWarnings() returned null
+[INFO] 1. Statement.clearWarnings() returned 
+[INFO] 1. Connection.getWarnings() returned null
+[INFO] 1. Connection.clearWarnings() returned 
+[INFO] 1. Connection.commit() returned 
+[INFO] 1. Connection.commit() returned 
+[INFO] 1. Statement.close() returned 
+[INFO] 1. Connection closed
+[INFO] 1. Connection.close() returned 
+      [sql] 99 of 99 SQL statements executed successfully
+[INFO] Executed tasks
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.533 s
+[INFO] Finished at: 2014-11-05T22:28:38+08:00
+[INFO] Final Memory: 14M/184M
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,40 @@
+{
+  "dependencies": {
+    "json": "~1.0.0"
+  },
+  "asyncDependencies": {},
+  "devDependencies": {
+    "assert": "~1.0.1"
+  },
+  "scripts": {},
+  "engines": {},
+  "name": "util",
+  "version": "1.0.5",
+  "description": "A port of 'util' for cortex from node.js, make your node code run in browsers.",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cortex-packages/browser-util.git"
+  },
+  "keywords": [
+    "checker",
+    "validator",
+    "validate",
+    "setter"
+  ],
+  "author": {
+    "name": "kael"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cortex-packages/browser-util/issues"
+  },
+  "gitHead": "9c858e5cecc2fda7d1f77855ff1a8093d28905b0",
+  "readme": "# util [![Build Status](https://travis-ci.org/cortex-packages/browser-util.png?branch=master)](https://travis-ci.org/cortex-packages/browser-util)\n\nA port of 'util' for cortex from node.js, make your node code run in browsers.\n\n## Usage\n\n[Node.js Utilities](http://nodejs.org/api/util.html)\n\n### util.isFunction\n\n### util.isArray\n\n### util.isError\n\n### util.isNull\n\n### util.isNullOrUndefined\n\n### util.isNumber\n\n### util.isDate\n\n## Removed APIs\n\nNotice that the following APIs has been removed:\n\n- util.debug(string)\n- util.error([...])\n- util.puts([...])\n- util.print([...])\n- util.pump(readableStream, writableStream, [callback])\n",
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/cortex-packages/browser-util",
+  "_id": "util@1.0.5",
+  "styles": [],
+  "css": [],
+  "entries": []
+}

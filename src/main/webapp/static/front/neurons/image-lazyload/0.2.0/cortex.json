@@ -1,0 +1,29 @@
+{
+  "name": "image-lazyload",
+  "version": "0.2.0",
+  "description": "image lazy load",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://code.dianpingoa.com/neurons/image-lazyload.git"
+  },
+  "keywords": [
+    "lazyload",
+    "lazy"
+  ],
+  "author": {
+    "name": "Mengzhe Wang",
+    "email": "mengzhe.wang@dianping.com"
+  },
+  "bugs": {
+    "url": "http://code.dianpingoa.com/neurons/image-lazyload/issues"
+  },
+  "homepage": "http://code.dianpingoa.com/neurons/image-lazyload",
+  "gitHead": "730f656fe27443bf5ee5434163d995e882988704",
+  "readme": "# image-lazyload\n\n图片延迟加载组件\n\n## 使用方法\n\n```html\n<img class=\"lazy\"\n     data-src=\"\"\n     src=\"data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==\"\n     alt=\"\">\n```\n\n```javascript\nvar lazyload = require('image-lazyload');\nlazyload.init({className: 'lazy'});    // 与html中img的class一致\n```\n\n## API\n\n```javascript\nlazyload.init(options);\n```\n\n### options\n* options.**className**: `string` 延迟加载的img标签的class，默认为`'lazy'`\n* options.**triggerLength**: `number` 图片距离视图底部多少时开始加载。默认为`200`\n\n## 特性\n\n* 仅支持纵向滚动\n* 兼容IE6+，Android 2.3+，iOS 5+\n\n## release note\n* __v0.2.0__ 添加对touchmove的监听",
+  "readmeFilename": "README.md",
+  "_id": "image-lazyload@0.2.0",
+  "styles": [],
+  "css": [],
+  "entries": []
+}

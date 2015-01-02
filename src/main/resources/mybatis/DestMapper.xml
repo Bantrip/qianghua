@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.banyou.backend.repository.mybatis.DestMyBatisDao">
+	<resultMap id="destMap" type="Dest">
+		<id property="id" column="dest_id" />
+		<result property="name" column="dest_name" />
+		<result property="type" column="dest_type"/>
+	</resultMap>
+
+	<!-- 获取部门详细信息, 输出用resultMap关联嵌套对象 -->
+	<select id="findDestByKeyword" parameterType="String" resultMap="destMap">
+	 <bind name="pattern" value="'%' +  _parameter.keyword  + '%'" />
+		select t.id as id,
+		t.name as dest_name,
+		t.type as dest_type
+		from dest t
+		where 1=1
+		<if test="keyword != null and keyword.length()>0">
+		and t.name like #{pattern} 
+		</if>
+		and exists(select 1 from product_has_dest pd where t.id=pd.dest_id)
+		<if test="filterIds.length >0">
+		and t.id not in
+		<foreach item="id" index="index" collection="filterIds"
+      		open="(" separator="," close=")">
+        	#{id}
+  		</foreach>
+		</if>
+		limit #{size}
+	</select>
+</mapper> 

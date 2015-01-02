@@ -1,0 +1,150 @@
+.Hide {
+  display: none;
+}
+.Fix:after,
+.uploadify-queue:after {
+  display: block;
+  content: ' ';
+  height: 0;
+  clear: both;
+}
+.uploadify-button {
+  border: 1px solid #aea79f;
+  border-radius: 4px;
+  background-color: #aea79f;
+  color: #fff;
+  text-align: center;
+}
+.uploadify-queue .item {
+  float: left;
+  width: 200px;
+  margin: 10px 10px 0 0;
+  background: #eee;
+}
+.uploadify-queue .item img {
+  width: 200px;
+  height: 200px;
+  border: none;
+  background: url("i/loading.gif") center center no-repeat #fff;
+}
+.uploadify-queue .item .status {
+  line-height: 30px;
+  text-align: center;
+  visibility: hidden;
+}
+.uploadify-queue .item .status .glyphicon {
+  margin-left: 5px;
+  cursor: pointer;
+}
+.uploadify-queue-item {
+  padding-right: 20px;
+  white-space: nowrap;
+}
+.uploadify-queue-item .cancel {
+  float: right;
+  margin-right: -20px;
+}
+.detail-text {
+  display: inline-block;
+  width: 80%;
+  vertical-align: top;
+}
+.btn-detail-del {
+  cursor: pointer;
+}
+.form-add-result .selected {
+  margin-top: 20px;
+}
+.form-add-result .selected dd {
+  text-indent: 2em;
+}
+.form-add-result .selected dd p {
+  margin-bottom: 0;
+}
+.form-add-result .selected dd span {
+  margin-right: 10px;
+}
+.modal-edit-tag .nav-tabs {
+  float: left;
+  border-bottom: none;
+  padding-right: 0;
+}
+.modal-edit-tag .nav-tabs li a {
+  margin-right: -1px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  background: #f9f9f9;
+}
+.modal-edit-tag .nav-tabs li.active a {
+  position: relative;
+  z-index: 1;
+  border-right: none;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+.modal-edit-tag .tab-content {
+  float: left;
+  height: 400px;
+  padding: 10px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+}
+.modal-edit-tag .tab-content .item {
+  float: left;
+  width: 20%;
+}
+.modal-edit-location .block {
+  float: left;
+  width: 47%;
+  height: 400px;
+}
+.modal-edit-location .result {
+  margin-right: 6%;
+  border: 1px solid #ccc;
+}
+.modal-edit-location .result .search {
+  padding: 5px 5px 0;
+  background: #f5f5f5;
+}
+.modal-edit-location .result .search .type {
+  margin-bottom: 0;
+  padding: 5px 0;
+}
+.modal-edit-location .result .search .type .item {
+  margin-right: 30px;
+}
+.modal-edit-location .result .list {
+  height: 323px;
+  overflow-y: auto;
+}
+.modal-edit-location .result .list ul {
+  padding: 10px 10px 0 10px;
+}
+.modal-edit-location .result .list ul li .disable {
+  color: #999;
+  cursor: default;
+}
+.modal-edit-location .result .list ul li .disable:hover {
+  text-decoration: none;
+}
+.modal-edit-location .selected .cont {
+  height: 370px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
+.modal-edit-location .selected .cont ul {
+  padding: 10px;
+}
+.modal-edit-location .selected .cont ul .glyphicon-remove {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.form-detail-con .item {
+  margin-bottom: 10px;
+}
+.form-detail-con .upload {
+  float: left;
+}
+.form-detail-con .glyphicon-remove {
+  float: right;
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.banyou.backend.repository.mybatis.ProductMyBatisDao">
+
+	<resultMap id="productMap" type="Product">
+		<id property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="recommand" column="recommand"/>
+		<result property="price" column="price"/>
+		<result property="pics" column="pics"/>
+		<result property="dest" column="dest"/>
+		<result property="stock" column="stock"/>
+		<result property="recommand" column="recommand"/>
+		<collection property="dests" ofType="Dest">
+		<id property="id" column="dest_id"/>
+			<result property="name" column="dest_name"/>
+		</collection>
+		
+	</resultMap>
+
+
+
+
+	<!-- 获取部门详细信息, 输出用resultMap关联嵌套对象 -->
+	<select id="findProductListByDestsByTags" parameterType="String" resultMap="productMap" >
+		select t.id as id,
+		t.name as name,
+		t.recommand as recommand,
+		t.price as price,
+		t.pics as pics,
+		t.stock as stock,
+		d.id as dest_id,
+		d.name as dest_name
+		from product t
+		join product_has_dest pd on pd.product_id=t.id
+		join dest d on d.id=pd.dest_id
+		where 1=1
+		and t.status = 2
+		<if test="dests.length >0">
+		and d.id  in
+		<foreach item="id" index="index" collection="dests"
+      		open="(" separator="," close=")">
+        	#{id}
+  		</foreach>
+		</if>
+		limit #{page.offset},#{page.size}
+	</select>
+</mapper> 

@@ -1,0 +1,32 @@
+{
+  "name": "mbox",
+  "main": "./lib/index.js",
+  "version": "1.0.1",
+  "description": "pop mbox",
+  "dependencies": {
+    "class": "~2.0.5",
+    "lang": "~1.0.0",
+    "jquery": "~1.9.2"
+  },
+  "author": {
+    "name": "supersheep",
+    "email": "supersheepxjy@gmail.com"
+  },
+  "css": [
+    "./css/mbox.css"
+  ],
+  "asyncDependencies": {},
+  "devDependencies": {
+    "assert": "~1.0.1",
+    "chai": "~1.9.1"
+  },
+  "scripts": {},
+  "keywords": [
+    "mbox"
+  ],
+  "gitHead": "3fbe1a2763efe5c3d94c459115115ed876e0e0ca",
+  "readme": "# mbox\n[![Build Status](http://browserman.dp:9000/api/app/mbox/badge)](http://search.cortexjs.org/package/mbox)\n\n> The best project ever.\n\n## Getting Started\nBefore anything taking its part, you should install [node](http://nodejs.org) and \"cortex\".\n\n#### Install Node\n\nVisit [http://nodejs.org](http://nodejs.org), download and install the proper version of nodejs.\n\n#### Install Cortex\n\n    # maybe you should use `sudo`\n    npm install -g cortex\n\n## Using mbox In Your Project\n\nFirst, install 'mbox' directly with `ctx install` (recommended)\n\t\n\tctx install mbox --save\n\t\nor, you could update your package.json manually\n    \n    dependencies: {\n        'mbox': '<version-you-want>'\n    }\n    \nand install dependencies\n\t\n\tctx install\n    \nThen, use `require` method in your module\n    \n    var mbox = require('mbox');\n    \nFinally, start cortex server\n    \n    ctx server\n    \nThen cortex will care all the rest.\n\n\n## API Documentation\n\n### mbox: constructor\n': constructor' means the `module.exports` of module 'mbox' is a constructor that we should use it with the `new` keyword\n\n\tnew mbox(options)\n\t\n#### options\n- options.name {String}\n\n\n\n### mbox.\\<method-name\\>(arguments)\nMeans this is a static method of `module.exports`\n\n#### arguments\n// arguments description here\n\n### .\\<method-name\\>(arguments)\nMean this is a method of the instance\n\n#### arguments\n// arguments description here",
+  "readmeFilename": "README.md",
+  "_id": "mbox@1.0.1",
+  "entries": []
+}
