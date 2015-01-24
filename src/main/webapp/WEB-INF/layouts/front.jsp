@@ -20,7 +20,7 @@
           </div>
           <a href="" class="cart"><span class="icon-cart"></span><span class="num">99</span><span class="name">购物车</span></a>
         -->
-       	</div> <a href="" class="logo"><img src="${staticPath}/images/logo.png"></a>
+       	</div> <a href="${pageContext.request.contextPath}/" class="logo"><img src="${staticPath}/images/logo.png"></a>
       </div>
     </div>
     <sitemesh:body/>      

@@ -32,6 +32,7 @@ public class Dest extends IdEntity {
 		this.name = name;
 	}
 
+	
 	public int getType() {
 		return type;
 	}

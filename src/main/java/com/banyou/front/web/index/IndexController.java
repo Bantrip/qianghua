@@ -45,11 +45,12 @@ public class IndexController {
 	@RequestMapping(value = { "/", "index", "" }, method = RequestMethod.GET)
 	public String index(HttpSession session, Model model) {
 		String lunboCode = "INDEX_LUNBO";
+		//用户目的地列表
 		Long[] ids = (Long[]) session.getAttribute(DEST_CODE);
-		
 		if (!ArrayUtils.isEmpty(ids)) {
 			model.addAttribute("dests", destService.findDests(ids));
 		}
+		//广告列表
 		List<AdContent> lunboAD = adService.getAdPositionByCode(lunboCode)
 				.getContent();
 		int lunboMax = 1;
@@ -58,7 +59,6 @@ public class IndexController {
 					lunboAD.subList(0, Math.min(lunboAD.size(), lunboMax)));
 		}
 
-		destService.findDests(ids);
 		return "index/index";
 	}
 

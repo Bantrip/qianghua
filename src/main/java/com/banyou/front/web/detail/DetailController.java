@@ -37,7 +37,7 @@ public class DetailController {
 	public String show(@PathVariable("id")Long id, Model model) {
 		Product product=productService.getProduct(id);
 		model.addAttribute("result",product );
-		return "front/detail";
+		return "detail/detail";
 	}
 	
 

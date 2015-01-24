@@ -17,10 +17,13 @@
         <div class="location Fix">
           <dl class="list">
             <dt><span class="icon-location"></span>你的目的地</dt>
-            <dd>曼谷</dd>
+            <c:forEach items="${dests}" var="dest">
+        		<dd>${dest.name}</dd>
+        	</c:forEach>
           </dl>
           <button type="button" class="btn btn-edit J_btn-edit">更改目的地</button>
         </div>
+        
         <div class="filter">
           <dl class="item Fix">
             <dt>品类</dt>
@@ -50,10 +53,12 @@
       <div class="mod block-list">
         <ul class="list Fix">
         <c:forEach items="${result}" var="item">
-          <li><span class="icon-zan"></span>
+          <li>
+          <!-- <span class="icon-zan"></span>  -->
           
-          <a href="${ctx}/front/detail/${item.id}" class="top"><img src="${item.defaultPic}" class="img"><span class="price-bg"></span><span class="price">￥${item.price}</span></a>
-            <div class="info"><a href="detail.html" class="name">${item.name}</a>
+          <a href="${ctx}/detail/${item.id}" class="top">
+          <img src="${item.defaultPic}" class="img"><span class="price-bg"></span><span class="price">￥${item.price}</span></a>
+            <div class="info"><a href="${ctx}/detail/${item.id}" class="name">${item.name}</a>
               <p class="location"><span class="icon-location"></span><c:forEach  items="${item.dests}" var="dest">
             	· ${dest.name}
             	</c:forEach></p>
